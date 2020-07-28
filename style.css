@@ -106,6 +106,10 @@ button {
 }
 
 /* form */
+.first_label {
+	padding: 0px 0px 0px 0px;
+  	display: inline-block;
+}
 input[type=text], select, textarea{
   	width: 100%;
   	padding: 12px;
@@ -133,7 +137,7 @@ input[type=submit] {
 	margin: 0px auto;
   	border-radius: 15px;
   	background-color: #f2f2f2;
-  	padding: 20px;
+  	padding: 10px 20px;
 }
 .col_25 {
   	float: left;
