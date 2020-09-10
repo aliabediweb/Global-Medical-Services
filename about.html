@@ -24,24 +24,11 @@
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
 	</div>
 		
-	<div class="slideshow-container">
-		<div class="mySlides fade">
-			<img src="Images/img_1.jpg" style="width:100%">
-		</div>
-		<div class="mySlides fade">
-			<img src="Images/img_2.jpg" style="width:100%">
-		</div>
-		<div class="mySlides fade">
-			<img src="Images/img_3.jpg" style="width:100%">
-		</div>
-	</div>
-	<br>
+	<h3>About Global Medical Services</h3>
 
-	<div style="text-align:center">
-		<span class="dot" onclick="currentSlide(1)"></span>
-		<span class="dot" onclick="currentSlide(2)"></span>
-		<span class="dot" onclick="currentSlide(3)"></span>
-	</div>
+	<p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eros in dui suscipit, quis viverra justo posuere. Sed pellentesque odio a odio mattis, quis sagittis arcu vulputate. Nunc hendrerit, leo vitae porta commodo, purus mi fringilla sem, ac rutrum mauris nulla a risus. Cras in blandit massa. Donec et nibh id elit suscipit dignissim sit amet non arcu. Quisque viverra arcu purus, non porta leo molestie ut. Maecenas nisi augue, eleifend semper quam eget, mattis mollis risus. In feugiat mi in nulla luctus, non auctor tellus consequat. Sed efficitur sem nec odio dignissim tempus.</p>
+
+	<img class="about_img" src="Images/about.jpg">
 		
 	<hr/>
 	<button>Schedule your visit</button>
@@ -52,26 +39,6 @@
 
 	
 	<script>
-		
-		var slideIndex = 0;
-		showSlides();
-
-		function showSlides() {
-			var i;
-		  	var slides = document.getElementsByClassName("mySlides");
-		  	var dots = document.getElementsByClassName("dot");
-		  	for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";  
-		  	}
-		  	slideIndex++;
-		  	if (slideIndex > slides.length) {slideIndex = 1}    
-		  	for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-		  	}
-		  	slides[slideIndex-1].style.display = "block";  
-		  	dots[slideIndex-1].className += " active";
-		  	setTimeout(showSlides, 10000); // Change image every 10 seconds
-		}
 		
 		function myFunction() {
   			var x = document.getElementById("myTopnav");

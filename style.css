@@ -132,7 +132,7 @@ input[type=submit] {
  	width: 100%;
 }
 .container {
-	width: 90%;
+	width: 750px;
 	display: block;
 	margin: 0px auto;
  	border-radius: 15px;
@@ -167,6 +167,27 @@ input[type=submit] {
 	resize: none;
 }
 /* form */
+
+/* services */
+.services {
+  background-color: cyan;
+  text-align: center;
+  width: 60%;
+  height: 200px;
+  margin: 30px auto;
+}
+/* services */
+
+/* about */
+.about_text {
+  margin: 0% 5% 0% 5%;
+}
+.about_img {
+  display: block;
+  width: 700px;
+  margin: 30px auto;
+}
+/* about */
 
 .footer {
 	margin-bottom: 0px;
@@ -222,13 +243,16 @@ input[type=submit] {
   }
   .col_75 {
     width: 100%;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 15px 0px;
   }
   .col_100 {
     width: 100%;
     text-align: left;
     margin: 0px;
   }
+  .about_img {
+    width: 70%;
+}
 }
 /* responsive */
 
