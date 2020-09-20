@@ -64,6 +64,8 @@ h3 {
   display: none;
 }
 .dot {
+  position: relative;
+  top: -65px;
   cursor: pointer;
   height: 15px;
   width: 15px;
