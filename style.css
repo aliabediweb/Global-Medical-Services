@@ -8,8 +8,8 @@ body {
 #header {
 	padding-left: 30px;
 	padding-top: 50px;
-	background-color: cyan;
-	color: black;
+	background-image: linear-gradient(to right, #034673, #00111f);
+	color: #f6a716;
 	font-size: 40px;
 	font-weight: bold;
 	letter-spacing: 2px;
@@ -17,8 +17,8 @@ body {
 #header_2 {
 	padding-left: 30px;
 	padding-bottom: 10px;
-	background-color: cyan;
-	color: black;
+	background-image: linear-gradient(to right, #034673, #00111f);
+	color: white;
 	font-size: 25px;
 	font-weight: bold;
 	letter-spacing: 1.5px;
@@ -98,13 +98,20 @@ h3 {
 button {
 	display: block;
 	margin: 10px auto;
-	background-color: cyan;
-  border: none;
+  border-radius: 10px;
+	background-color: #f6a716;
+  border: 2px solid black;
   color: black;
   padding: 15px 32px;
   text-align: center;
 	text-decoration: none;
   font-size: 16px;
+}
+button:hover {
+  color: white;
+}
+button:active {
+  background-color: black;
 }
 
 /* form */
@@ -138,7 +145,7 @@ input[type=submit] {
 	display: block;
 	margin: 0px auto;
  	border-radius: 15px;
- 	background-color: #f2f2f2;
+ 	background-color: #ddd;
  	padding: 10px 20px;
 }
 .col_25 {
@@ -168,6 +175,15 @@ input[type=submit] {
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 	resize: none;
 }
+#submit_btn {
+  font-weight: bold;
+  font-size: 0.9em;
+  border: 2px solid white;
+}
+#submit_btn:active {
+  border: 2px solid black;
+  color: black;
+}
 /* form */
 
 /* services */
@@ -177,10 +193,11 @@ input[type=submit] {
 }
 .services {
   display: inline;
-  background-color: cyan;
+  background-color: #92c2d8;
   text-align: center;
+  border-radius: 15px;
   width: 40%;
-  height: 100px;
+  height: 75px;
   margin: 30px auto;
   padding: 20px;
   font-size: 1.2em;
@@ -199,10 +216,10 @@ input[type=submit] {
 /* about */
 
 .footer {
-	margin-bottom: 0px;
-	padding-bottom: 10px;
+  background-image: linear-gradient(to right, #034673, #00111f);
+  padding: 10px 0px;
 	text-align: center;
-	color: black;
+	color: white;
 	font-size: 0.7em;
 	font-weight: bold;
 }
@@ -242,7 +259,6 @@ input[type=submit] {
 		width: 90%;
 		margin: 0px auto;
 		border-radius: 15px;
-  	background-color: #f2f2f2;
   	padding: 15px;
 	}
   .col_25 {
@@ -260,16 +276,11 @@ input[type=submit] {
     margin: 0px;
   }
   .services_container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
   .services {
-  background-color: cyan;
-  text-align: center;
-  width: 70%;
-  height: 100px;
-  margin: 30px auto;
-  padding: 20px;
+    width: 70%;
   }
   .about_img {
     width: 70%;
