@@ -12,6 +12,39 @@
 </head>
 
 <body>
+
+  <?php
+
+    if(isset($_POST["submit"])) {
+        $recipient="aliabediweb@outlook.com";
+        $subject="Global Medical Services - New Appointment Request";
+
+        $new_returning=$_POST["new_returning"];
+        $f_name=$_POST["f_name"];
+        $l_name=$_POST["l_name"];
+        $email=$_POST["email"];
+        $number=$_POST["number"];
+        $birthday=$_POST["birthday"];
+        $reason=$_POST["reason"];
+
+        $message=$_POST["message"];
+
+
+        $mailBody="
+          New or returning patient: $new_returning\n
+          First name: $f_name\n
+          Last name: $l_name\n
+          Email: $email\n
+          Phone number: $number\n
+          Birthday: $birthday\n
+          Reason for visit: $reason\n\n
+          Message (optional): $message
+        ";
+
+        mail($recipient, $subject, $mailBody, "From: <$email>");
+    }
+
+  ?>
 	
 	<div id="header">Global Medical Services</div>
 	<div id="header_2">Medical Care Extraordinaire</div>
@@ -27,78 +60,78 @@
 	<h3>Appointment Request</h3>
 	
 	<div class="container">
-  		<form action="action_page.php">	
+  		<form method="post" action="contact.php">	
 			
 			<div class="form_row">
 				<div class="col_100">
-        			<label class="first_label" for="name">Are you a new or returning patient?</label>
+        			<label class="first_label">Are you a new or returning patient?</label>
       			</div>
 				<div class="col_35">
-						<input type="radio" id="male" name="gender" value="male">
-  						<label for="male">New</label><br>
+						<input type="radio" id="new" name="new_returning" value="New">
+  						<label for="new">New</label><br>
 				</div>
 				<div class="col_35">
-						<input type="radio" id="male" name="gender" value="male">
-  						<label for="male">Returning</label><br>
+						<input type="radio" id="returning" name="new_returning" value="Returning">
+  						<label for="returning">Returning</label><br>
 				</div>
 			</div>
 			
     		<div class="form_row">
       			<div class="col_25">
-        			<label for="name">First Name:</label>
+        			<label for="form_f_name">First Name:</label>
       			</div>
       			<div class="col_75">
-        			<input type="text" id="form_f_name" name="form_f_name" placeholder="Your first name..">
+        			<input type="text" id="form_f_name" name="f_name" placeholder="Your first name..">
       			</div>
     		</div>
 			
 			<div class="form_row">
       			<div class="col_25">
-        			<label for="name">Last Name:</label>
+        			<label for="form_l_name">Last Name:</label>
       			</div>
       			<div class="col_75">
-        			<input type="text" id="form_l_name" name="form_l_name" placeholder="Your last name..">
+        			<input type="text" id="form_l_name" name="l_name" placeholder="Your last name..">
       			</div>
 			</div>
 			
 			<div class="form_row">
       			<div class="col_25">
-        			<label for="name">Email:</label>
+        			<label for="form_email">Email:</label>
       			</div>
       			<div class="col_75">
-        			<input type="text" id="form_email" name="form_email" placeholder="email@domain.com">
+        			<input type="text" id="form_email" name="email" placeholder="email@domain.com">
       			</div>
 			</div>
 			
 			<div class="form_row">
       			<div class="col_25">
-        			<label for="name">Phone Number:</label>
+        			<label for="form_number">Phone Number:</label>
       			</div>
       			<div class="col_75">
-        			<input type="text" id="form_name" name="form_name" placeholder="(888) 888-8888">
+        			<input type="number" id="form_number" name="number" placeholder="(888) 888-8888">
       			</div>
 			</div>
 			
 			<div class="form_row">
       			<div class="col_25">
-        			<label for="name">Date of Birth</label>
+        			<label for="form_dob">Date of Birth</label>
       			</div>
       			<div class="col_75">
-        			<input type="text" id="form_name" name="form_name" placeholder="MM/DD/YYYY">
+        			<input type="date" id="form_dob" name="birthday" placeholder="MM/DD/YYYY">
       			</div>
     		</div>
     		
 			<div class="form_row">
       			<div class="col_25">
-        			<label for="form_region">Reason for visit:</label>
+        			<label for="form_reason">Reason for visit:</label>
       			</div>
       			<div class="col_75">
-        			<select id="form_region" name="form_region">
+        			<select id="form_reason" name="reason">
 						<option value="" disabled selected>Select your reason</option>
-						<option value="north_america">Perscription</option>
-          				<option value="europe">Pain</option>
-						<option value="asia">Check-up</option>
-						<option value="other">Other</option>
+						<option value="Perscription">Perscription</option>
+          				<option value="Pain">Pain</option>
+						<option value="Check-up">Check-up</option>
+						<option value="Other">Other</option>
         			</select>
       			</div>
     		</div>	
@@ -108,12 +141,12 @@
         			<label for="form_message">Message (optional):</label>
       			</div>
       			<div class="col_75">
-        			<textarea id="form_message" name="form_message" placeholder="Write something.." style="height:100px"></textarea>
+        			<textarea id="form_message" name="message" placeholder="Write something.." style="height:100px"></textarea>
       			</div>
     		</div>	
 			
     		<div class="form_row">
-      			<input id="submit_btn" type="submit" value="Submit" disabled>
+      			<input id="submit_btn" name="submit" type="submit" value="submit">
     		</div>
 			
 		</form>
