@@ -53,7 +53,8 @@ body {
 /* nagivation */
 
 h3, p {
-	color: black; 
+	color: black;
+  text-align: center; 
 }
 h3 {
 	text-align: center;
