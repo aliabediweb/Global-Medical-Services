@@ -278,7 +278,7 @@ input[type=submit] {
   }
   .services_container {
     flex-direction: column;
-}
+  }
   .services {
     width: 70%;
   }
