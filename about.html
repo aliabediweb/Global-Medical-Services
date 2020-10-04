@@ -17,11 +17,12 @@
 	<div id="header_2">Medical Care Extraordinaire</div>
 
 	<div class="topnav" id="myTopnav">
-		<a href="index.html">Home</a>
-		<a href="contact.html">Contact</a>
-		<a href="services.html">Services</a>
-		<a href="about.html" class="active">About</a>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+		<a class="placeholder_link" >&nbsp;</a>
+		<a href="index.html" class="menu_link ">Home</a>
+		<a href="contact.html" class="menu_link">Contact</a>
+		<a href="services.html" class="menu_link">Services</a>
+		<a href="about.html" class="menu_link active">About</a>
+		<a href="javascript:void(0);" id="icon" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
 	</div>
 		
 	<h3>About Global Medical Services</h3>
@@ -45,10 +46,34 @@
 		
 		function myFunction() {
   			var x = document.getElementById("myTopnav");
+  			var icon_node = document.getElementById("icon");
+  			var menu_link_node =document.getElementsByClassName("menu_link");
   			if (x.className === "topnav") {
     			x.className += " responsive";
+    			x.className += " animate";
+    			icon_node.innerHTML = '<i class="fa fa-times"></i>';
+    			menu_link_node[0].classList.remove("animate_links_r");
+    			menu_link_node[1].classList.remove("animate_links_r");
+    			menu_link_node[2].classList.remove("animate_links_r");
+    			menu_link_node[3].classList.remove("animate_links_r");
+    			menu_link_node[0].classList.add("animate_links");
+    			menu_link_node[1].classList.add("animate_links");
+    			menu_link_node[2].classList.add("animate_links");
+    			menu_link_node[3].classList.add("animate_links");
   			} else {
-    			x.className = "topnav";
+  				menu_link_node[0].classList.add("animate_links_r");
+    			menu_link_node[1].classList.add("animate_links_r");
+    			menu_link_node[2].classList.add("animate_links_r");
+    			menu_link_node[3].classList.add("animate_links_r");
+  				setTimeout(closeMenu, 250);
+    			function closeMenu() {
+    				menu_link_node[0].classList.remove("animate_links");
+    				menu_link_node[1].classList.remove("animate_links");
+    				menu_link_node[2].classList.remove("animate_links");
+    				menu_link_node[3].classList.remove("animate_links");
+    				icon_node.innerHTML = '<i class="fa fa-bars"></i>';
+    				setTimeout(function(){ x.className = "topnav"; }, 250);
+    			}
   			}
 		}
 		
