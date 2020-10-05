@@ -13,6 +13,7 @@
 
 <body>
 	
+	<a href="index.html"><img id="logo" src="Images/logo.png"></a>
 	<div id="header">Global Medical Services</div>
 	<div id="header_2">Medical Care Extraordinaire</div>
 
@@ -25,6 +26,8 @@
 		<a href="javascript:void(0);" id="icon" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
 	</div>
 		
+	<div class="img_text">Metro Detroit's #1 clinic for internal medicine & pain management</div>
+	<div class="img_text_2">Call now to schedule or book your appointment online</div>	
 	<div class="slideshow-container">
 		<div class="mySlides fade">
 			<img src="Images/img_1.jpg" style="width:100%">
@@ -70,11 +73,11 @@
 		  	slideIndex++;
 		  	if (slideIndex > slides.length) {slideIndex = 1}    
 		  	for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
+				dots[i].className = dots[i].className.replace(" active_dot", "");
 		  	}
 		  	slides[slideIndex-1].style.display = "block";  
-		  	dots[slideIndex-1].className += " active";
-		  	setTimeout(showSlides, 10000); // Change image every 10 seconds
+		  	dots[slideIndex-1].className += " active_dot";
+		  	setTimeout(showSlides, 7000); // Change image every 10 seconds
 		}
 		
 		function myFunction() {
@@ -85,6 +88,7 @@
     			x.className += " responsive";
     			x.className += " animate";
     			icon_node.innerHTML = '<i class="fa fa-times"></i>';
+    			// for i
     			menu_link_node[0].classList.remove("animate_links_r");
     			menu_link_node[1].classList.remove("animate_links_r");
     			menu_link_node[2].classList.remove("animate_links_r");
@@ -94,12 +98,14 @@
     			menu_link_node[2].classList.add("animate_links");
     			menu_link_node[3].classList.add("animate_links");
   			} else {
+  				//for i
   				menu_link_node[0].classList.add("animate_links_r");
     			menu_link_node[1].classList.add("animate_links_r");
     			menu_link_node[2].classList.add("animate_links_r");
     			menu_link_node[3].classList.add("animate_links_r");
   				setTimeout(closeMenu, 250);
     			function closeMenu() {
+    				//for i
     				menu_link_node[0].classList.remove("animate_links");
     				menu_link_node[1].classList.remove("animate_links");
     				menu_link_node[2].classList.remove("animate_links");
