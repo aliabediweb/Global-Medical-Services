@@ -41,15 +41,11 @@
 		<div class="services">Physician Clearance for Surgeries</div>
 	</div>
 
-	<hr/>
-
 	<form action="contact.html">
 		<button type="submit">Schedule your visit</button>
 	</form>
 	
-	<hr/>
-	
-	<p class="footer">Global Medical Services </br> 22819 Michigan Ave, Dearborn, MI 48124 </br> (313) 769-5820 </p>
+	<p class="footer">Global Medical Services </br> 22819 Michigan Ave, Dearborn, MI 48124 </br> (313) 769-5820 </br></br>--- Copyright © Ali Abedi [October 2020] ---</p>
 
 	
 	<script>
@@ -62,25 +58,22 @@
     			x.className += " responsive";
     			x.className += " animate";
     			icon_node.innerHTML = '<i class="fa fa-times"></i>';
-    			menu_link_node[0].classList.remove("animate_links_r");
-    			menu_link_node[1].classList.remove("animate_links_r");
-    			menu_link_node[2].classList.remove("animate_links_r");
-    			menu_link_node[3].classList.remove("animate_links_r");
-    			menu_link_node[0].classList.add("animate_links");
-    			menu_link_node[1].classList.add("animate_links");
-    			menu_link_node[2].classList.add("animate_links");
-    			menu_link_node[3].classList.add("animate_links");
+    			var i = 0; 
+    			for (i = 0; i < menu_link_node.length; i++) {
+    				menu_link_node[i].classList.remove("animate_links_r");
+    				menu_link_node[i].classList.add("animate_links");
+    			}
   			} else {
-  				menu_link_node[0].classList.add("animate_links_r");
-    			menu_link_node[1].classList.add("animate_links_r");
-    			menu_link_node[2].classList.add("animate_links_r");
-    			menu_link_node[3].classList.add("animate_links_r");
+    			var i = 0; 
+    			for (i = 0; i < menu_link_node.length; i++) {
+    				menu_link_node[i].classList.add("animate_links_r");
+    			}
   				setTimeout(closeMenu, 250);
     			function closeMenu() {
-    				menu_link_node[0].classList.remove("animate_links");
-    				menu_link_node[1].classList.remove("animate_links");
-    				menu_link_node[2].classList.remove("animate_links");
-    				menu_link_node[3].classList.remove("animate_links");
+    				var i = 0; 
+    				for (i = 0; i < menu_link_node.length; i++) {
+    					menu_link_node[i].classList.remove("animate_links");
+    				}
     				icon_node.innerHTML = '<i class="fa fa-bars"></i>';
     				setTimeout(function(){ x.className = "topnav"; }, 250);
     			}

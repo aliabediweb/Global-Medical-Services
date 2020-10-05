@@ -39,23 +39,27 @@
 			<img src="Images/img_3.jpg" style="width:100%">
 		</div>
 	</div>
-	<br>
+	<br/>
 
 	<div style="text-align:center">
 		<span class="dot" onclick="currentSlide(1)"></span>
 		<span class="dot" onclick="currentSlide(2)"></span>
 		<span class="dot" onclick="currentSlide(3)"></span>
 	</div>
+
+	<p class="notice_text">Please contact our office to schedule your online appointment. We will not be seeing any non-emergent patients in the office until further notice. Our Physicians and Staff are still available for all your healthcare needs. Please contact us at <b>(313) 769-5820</b>.</p>
+	<p class="testimonial_text">"Great doctors and friendly staff. They are very helpful and caring."</p>
+	<p class="testimonial_text_2"><b>Dan G.</b> - Google</p>
+	<p class="testimonial_text">"I have been going to this clinic for 10 years and they're wonderful."</p>
+	<p class="testimonial_text_2"><b>Emily R.</b> - Google</p>
+	<p class="testimonial_text">"My quality of life has improved considerably since changing my provider to this clinic."</p>
+	<p class="testimonial_text_2"><b>Stacy B.</b> - Google</p>
 		
-	<hr/>
-	
 	<form action="contact.html">
 		<button type="submit">Schedule your visit</button>
 	</form>
 	
-	<hr/>
-	
-	<p class="footer">Global Medical Services </br> 22819 Michigan Ave, Dearborn, MI 48124 </br> (313) 769-5820 </p>
+	<p class="footer">Global Medical Services </br> 22819 Michigan Ave, Dearborn, MI 48124 </br> (313) 769-5820 </br></br>--- Copyright © Ali Abedi [October 2020] ---</p>
 
 
 	<script>
@@ -88,28 +92,22 @@
     			x.className += " responsive";
     			x.className += " animate";
     			icon_node.innerHTML = '<i class="fa fa-times"></i>';
-    			// for i
-    			menu_link_node[0].classList.remove("animate_links_r");
-    			menu_link_node[1].classList.remove("animate_links_r");
-    			menu_link_node[2].classList.remove("animate_links_r");
-    			menu_link_node[3].classList.remove("animate_links_r");
-    			menu_link_node[0].classList.add("animate_links");
-    			menu_link_node[1].classList.add("animate_links");
-    			menu_link_node[2].classList.add("animate_links");
-    			menu_link_node[3].classList.add("animate_links");
+    			var i = 0; 
+    			for (i = 0; i < menu_link_node.length; i++) {
+    				menu_link_node[i].classList.remove("animate_links_r");
+    				menu_link_node[i].classList.add("animate_links");
+    			}
   			} else {
-  				//for i
-  				menu_link_node[0].classList.add("animate_links_r");
-    			menu_link_node[1].classList.add("animate_links_r");
-    			menu_link_node[2].classList.add("animate_links_r");
-    			menu_link_node[3].classList.add("animate_links_r");
+    			var i = 0; 
+    			for (i = 0; i < menu_link_node.length; i++) {
+    				menu_link_node[i].classList.add("animate_links_r");
+    			}
   				setTimeout(closeMenu, 250);
     			function closeMenu() {
-    				//for i
-    				menu_link_node[0].classList.remove("animate_links");
-    				menu_link_node[1].classList.remove("animate_links");
-    				menu_link_node[2].classList.remove("animate_links");
-    				menu_link_node[3].classList.remove("animate_links");
+    				var i = 0; 
+    				for (i = 0; i < menu_link_node.length; i++) {
+    					menu_link_node[i].classList.remove("animate_links");
+    				}
     				icon_node.innerHTML = '<i class="fa fa-bars"></i>';
     				setTimeout(function(){ x.className = "topnav"; }, 250);
     			}

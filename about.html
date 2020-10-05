@@ -28,19 +28,15 @@
 		
 	<h3>About Global Medical Services</h3>
 
-	<p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eros in dui suscipit, quis viverra justo posuere. Sed pellentesque odio a odio mattis, quis sagittis arcu vulputate. Nunc hendrerit, leo vitae porta commodo, purus mi fringilla sem, ac rutrum mauris nulla a risus. Cras in blandit massa. Donec et nibh id elit suscipit dignissim sit amet non arcu. Quisque viverra arcu purus, non porta leo molestie ut. Maecenas nisi augue, eleifend semper quam eget, mattis mollis risus. In feugiat mi in nulla luctus, non auctor tellus consequat. Sed efficitur sem nec odio dignissim tempus.</p>
+	<p class="about_text">Global Medical Services is a state-of-the-art pain management practice that focuses on providing individualized treatment options to Detroit-area patients struggling with acute and chronic pain. At Global Medical Services, each patient receives compassionate and thoughtful care. The practice’s pain management specialists aim to control your symptoms and address the source of your discomfort. They know that one size does not fit all, so treatments are tailored to individual need. If you are seeking pain relief, contact Global Medical Services to schedule an appointment. Book your appointment online or call today.</p>
 
 	<img class="about_img" src="Images/about.jpg">
-		
-	<hr/>
 	
 	<form action="contact.html">
 		<button type="submit">Schedule your visit</button>
 	</form>
 	
-	<hr/>
-	
-	<p class="footer">Global Medical Services </br> 22819 Michigan Ave, Dearborn, MI 48124 </br> (313) 769-5820 </p>
+	<p class="footer">Global Medical Services </br> 22819 Michigan Ave, Dearborn, MI 48124 </br> (313) 769-5820 </br></br>--- Copyright © Ali Abedi [October 2020] ---</p>
 
 	
 	<script>
@@ -53,25 +49,22 @@
     			x.className += " responsive";
     			x.className += " animate";
     			icon_node.innerHTML = '<i class="fa fa-times"></i>';
-    			menu_link_node[0].classList.remove("animate_links_r");
-    			menu_link_node[1].classList.remove("animate_links_r");
-    			menu_link_node[2].classList.remove("animate_links_r");
-    			menu_link_node[3].classList.remove("animate_links_r");
-    			menu_link_node[0].classList.add("animate_links");
-    			menu_link_node[1].classList.add("animate_links");
-    			menu_link_node[2].classList.add("animate_links");
-    			menu_link_node[3].classList.add("animate_links");
+    			var i = 0; 
+    			for (i = 0; i < menu_link_node.length; i++) {
+    				menu_link_node[i].classList.remove("animate_links_r");
+    				menu_link_node[i].classList.add("animate_links");
+    			}
   			} else {
-  				menu_link_node[0].classList.add("animate_links_r");
-    			menu_link_node[1].classList.add("animate_links_r");
-    			menu_link_node[2].classList.add("animate_links_r");
-    			menu_link_node[3].classList.add("animate_links_r");
+    			var i = 0; 
+    			for (i = 0; i < menu_link_node.length; i++) {
+    				menu_link_node[i].classList.add("animate_links_r");
+    			}
   				setTimeout(closeMenu, 250);
     			function closeMenu() {
-    				menu_link_node[0].classList.remove("animate_links");
-    				menu_link_node[1].classList.remove("animate_links");
-    				menu_link_node[2].classList.remove("animate_links");
-    				menu_link_node[3].classList.remove("animate_links");
+    				var i = 0; 
+    				for (i = 0; i < menu_link_node.length; i++) {
+    					menu_link_node[i].classList.remove("animate_links");
+    				}
     				icon_node.innerHTML = '<i class="fa fa-bars"></i>';
     				setTimeout(function(){ x.className = "topnav"; }, 250);
     			}
