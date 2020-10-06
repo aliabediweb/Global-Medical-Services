@@ -14,8 +14,7 @@
 <body>
 	
 	<a href="index.html"><img id="logo" src="Images/logo.png"></a>
-	<div id="header">Global Medical Services</div>
-	<div id="header_2">Medical Care Extraordinaire</div>
+	<div id="header">Global Medical Services<br><span id="subheader">Medical Care Extraordinaire</span></div>
 
 	<div class="topnav" id="myTopnav">
 		<a class="placeholder_link" >&nbsp;</a>
@@ -23,12 +22,12 @@
 		<a href="contact.html" class="menu_link">Contact</a>
 		<a href="services.html" class="menu_link">Services</a>
 		<a href="about.html" class="menu_link active">About</a>
-		<a href="javascript:void(0);" id="icon" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+		<a href="javascript:void(0);" id="icon" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
 	</div>
 		
 	<h3>About Global Medical Services</h3>
 
-	<p class="about_text">Global Medical Services is a state-of-the-art pain management practice that focuses on providing individualized treatment options to Detroit-area patients struggling with acute and chronic pain. At Global Medical Services, each patient receives compassionate and thoughtful care. The practice’s pain management specialists aim to control your symptoms and address the source of your discomfort. They know that one size does not fit all, so treatments are tailored to individual need. If you are seeking pain relief, contact Global Medical Services to schedule an appointment. Book your appointment online or call today.</p>
+	<p class="about_text">Global Medical Services is a state-of-the-art pain management practice that focuses on providing individualized treatment options to Detroit-area patients struggling with acute and chronic pain.<br><br>At Global Medical Services, each patient receives compassionate and thoughtful care. The practice’s pain management specialists aim to control your symptoms and address the source of your discomfort. They know that one size does not fit all, so treatments are tailored to individual need.<br><br>If you are seeking pain relief, contact Global Medical Services to schedule an appointment. Book your appointment online or call today.</p>
 
 	<img class="about_img" src="Images/about.jpg">
 	
@@ -41,7 +40,7 @@
 	
 	<script>
 		
-		function myFunction() {
+		function toggleMenu() {
   			var x = document.getElementById("myTopnav");
   			var icon_node = document.getElementById("icon");
   			var menu_link_node =document.getElementsByClassName("menu_link");

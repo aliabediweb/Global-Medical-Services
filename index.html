@@ -14,8 +14,7 @@
 <body>
 	
 	<a href="index.html"><img id="logo" src="Images/logo.png"></a>
-	<div id="header">Global Medical Services</div>
-	<div id="header_2">Medical Care Extraordinaire</div>
+	<div id="header">Global Medical Services<br><span id="subheader">Medical Care Extraordinaire</span></div>
 
 	<div class="topnav" id="myTopnav">
 		<a class="placeholder_link" >&nbsp;</a>
@@ -23,7 +22,7 @@
 		<a href="contact.html" class="menu_link">Contact</a>
 		<a href="services.html" class="menu_link">Services</a>
 		<a href="about.html" class="menu_link">About</a>
-		<a href="javascript:void(0);" id="icon" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+		<a href="javascript:void(0);" id="icon" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
 	</div>
 		
 	<div class="img_text">Metro Detroit's #1 clinic for internal medicine & pain management</div>
@@ -84,7 +83,7 @@
 		  	setTimeout(showSlides, 7000); // Change image every 10 seconds
 		}
 		
-		function myFunction() {
+		function toggleMenu() {
   			var x = document.getElementById("myTopnav");
   			var icon_node = document.getElementById("icon");
   			var menu_link_node =document.getElementsByClassName("menu_link");
